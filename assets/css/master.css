@@ -1,0 +1,110 @@
+html {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #2A2C2B;
+    display: table-cell;
+}
+
+body {
+    margin: 0;
+    padding: 20px 200px 20px 20px;
+    background-color: #1E1E20;
+    color: #ECE5CE;
+    font-family: 'Merriweather Sans';
+    font-size: 13px;
+    font-weight: 300;
+    width: 550px;
+    height: 100%;
+    line-height: 145%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 15px 0;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #479ABF;
+}
+
+p {
+    text-align: justify;
+    
+}
+
+a {
+    color: #DC5123;
+    text-decoration: none;
+}
+
+blockquote {
+    background-color: #374140;
+    padding: 15px;
+    margin: 10px 0;
+    border-left: 5px solid #2A2C2B;
+}
+
+blockquote .attribution {
+    display: block;
+    text-align: right;
+    padding: 0 10px;
+    font-style: italic;
+    font-weight: 100;
+}
+
+blockquote .attribution:before {
+    content: '—';
+    padding: 0 10px;
+}
+
+hr {
+    height: 0px;
+    color: #374140;
+    border-bottom: 1px solid #374140;
+}
+
+a:hover {
+    color: #F5CEC1;
+}
+
+body > header > h1 {
+    font-size: 250%;
+    color: #DC5123;
+}
+
+.fatlist > .entry {
+    display: block;
+    padding: 8px 8px 8px 30px;
+    color: inherit;
+}
+
+.fatlist > a.entry:hover {
+    background-color: rgba( 255, 255, 255, 0.08 );
+}
+
+.fatlist > a.entry:active {
+    background-color: rgba( 255, 255, 255, 0.2 );
+}
+
+.fatlist > .entry > .title {
+    text-transform: uppercase;
+    display: block;
+    font-size: 125%;
+    font-weight: 500;
+}
+
+.fatlist > .entry > .subtitle {
+    display: block;
+    font-weight: 100;
+    color: #8E897C;
+}
+
+.aside {
+    position: absolute;
+    left: 590px;
+    width: 175px;
+    text-align: left;
+    font-size: 80%;
+    color: #8E897C;
+    line-height: 125%;
+}
