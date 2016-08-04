@@ -1,0 +1,63 @@
+{
+    "projects" : [
+        {
+            "title" : "busboy",
+            "blurb" : "A toy stack-oriented programming language",
+            "href"  : "https://github.com/maxvu/busboy"
+        },
+        {
+            "title" : "silver",
+            "blurb" : "A tiny PHP testing framework",
+            "href"  : "https://github.com/maxvu/sliver"
+        },
+        {
+            "title" : "banquet",
+            "blurb" : "A small cryptography challenge",
+            "href"  : "https://github.com/maxvu/banquet"
+        },
+        {
+            "title" : "banquet",
+            "blurb" : "A small cryptography challenge",
+            "href"  : "https://github.com/maxvu/banquet"
+        }
+    ],
+    "work" : [
+        {
+            "title" : "Software Developer",
+            "blurb" : "athenahealth, Inc.",
+            "href"  : "http://www.athenahealth.com/",
+            "extra" : [
+                "Summer 2015 to Summer 2016"
+            ]
+        },
+        {
+            "title" : "Software Development Engineer",
+            "blurb" : "Amazon Web Services",
+            "href"  : "https://aws.amazon.com/about-aws/global-infrastructure/",
+            "extra" : [
+                "Summer 2014 to Spring 2015",
+                "Summer 2013 Intern"
+            ]
+        }
+    ],
+    "education" : [
+        {
+            "title" : "B.S. Computer Science",
+            "blurb" : "Rensselaer Polytechnic Institute",
+            "href"  : "https://www.cs.rpi.edu/",
+            "extra" : [
+                "Fall 2010 to Spring 2014"
+            ]
+        }
+    ],
+    "links" : [
+        {
+            "title" : "github",
+            "href"  : "https://github.com/maxvu"
+        },
+        {
+            "title" : "facebook",
+            "href"  : "https://www.facebook.com/maxvu"
+        }
+    ]
+}

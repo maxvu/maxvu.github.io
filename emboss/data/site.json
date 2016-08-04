@@ -1,0 +1,13 @@
+{
+    "title"       : "max vu",
+    "header"      : "max vu",
+    "subheader"   : "",
+    "posts_glob"  : "data/posts/*.md",
+    "site_root"   : "..",
+    "css"         : [
+        "/assets/css/master.css"
+    ],
+    "js"          : [],
+    "lang"        : "en",
+    "description" : "Personal blog and portfolio."
+}

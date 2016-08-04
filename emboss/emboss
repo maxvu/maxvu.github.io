@@ -1,0 +1,100 @@
+#!/usr/bin/env php
+<?php
+
+require 'lib/Parsedown.php';
+
+class Template {
+    protected $location;
+    public function __construct ( $location ) {
+        $this->location = $location;
+    }
+    public function generate ( $scope ) {
+        extract( $scope );
+        ob_start();
+        require( $this->location );
+        return ob_get_clean();
+    }
+}
+
+class Document {
+    public static function load ( $location ) {
+        if ( 0 == preg_match( "/\d+\-([a-zA-Z0-9\-]+)/", $location, $match ) )
+            throw new Exception( "Document needs to indicate slug in name." );
+        $slug = $match[1];
+        if ( !file_exists( $location ) )
+            throw new Exception( "No such file: $location." );
+        $raw = file_get_contents( $location );
+        if ( $raw === false )
+            throw new Exception( "Couldn't load $location." );
+        list( $metadata, $content ) = explode( '---', $raw, 2 );
+        $metadata = JSON::parse( $metadata );
+        return array_merge(
+            $metadata,
+            [
+                'content' => $content,
+                'slug'    => $slug
+            ]
+        );
+    }
+}
+
+class JSON {
+    public static function parse ( $json ) {
+        $obj = json_decode( $json, true );
+        if ( null === $obj ) {
+            throw new Exception(
+                "JSON parse error in $location\n" .
+                json_last_error_msg() .
+                "\n"
+            );
+        }
+        return $obj;
+    }
+    public static function parseFile ( $location ) {
+        return JSON::parse( file_get_contents( $location ) );
+    }
+}
+
+$site_conf  = JSON::parseFile( 'data/site.json' );
+$index_conf = JSON::parseFile( 'data/index.json' );
+$site_root = $site_conf['site_root'];
+$posts = [];
+
+`rm -rf $site_root/posts`;
+mkdir( "$site_root/posts" );
+foreach ( glob( $site_conf['posts_glob'] ) as $post ) {
+    $post = Document::load( $post );
+    $post['link'] = "/posts/{$post['slug']}";
+    $posts[] = $post;
+    mkdir( "$site_root/posts/{$post['slug']}" );
+    
+    $post_partial = (new Template( 'data/templates/post.php' ))->generate(
+        $post
+    );
+    
+    file_put_contents(
+        "$site_root/posts/{$post['slug']}/index.htm",
+        (new Template( 'data/templates/base.php' ))->generate(
+            $site_conf + [
+                'content' => $post_partial
+            ]
+        )
+    );
+}
+
+# Write index page.
+$index_partial = (new Template( 'data/templates/index.php' ))->generate([
+    'posts'    => $posts,
+    'sections' => $index_conf
+]);
+file_put_contents(
+    "{$site_conf['site_root']}/index.htm",
+    (new Template( 'data/templates/base.php' ))->generate(
+        $site_conf + [
+            'content' => $index_partial
+        ]
+    )
+)
+
+
+?>
