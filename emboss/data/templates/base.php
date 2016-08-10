@@ -30,7 +30,12 @@
             <?php if ( isset( $subheader ) && !empty( $subheader ) ) { ?>
                 <h2><?= $subheader ?></h2>
             <?php } ?>
+            <?php if ( isset( $postheader ) && !empty( $postheader ) ) { ?>
+                <h2><?= $postheader ?></h2>
+            <?php } ?>
         </header>
-        <?= $content ?>
+        <div id="page-content">
+            <?= $content ?>
+        </div>
     </body>
 </html>

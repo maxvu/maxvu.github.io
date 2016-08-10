@@ -1,129 +1,162 @@
 a {
     color: inherit;
     text-decoration: none;
-    color: #FF7F66;
+    color: #FFA790;
 }
 
 a:hover {
-    color: #EDE5D5;
+    color: #FF7F66;
+}
+
+h1, h2, h3, h4 {
+    margin: 10px 0;
+    text-align: left;
+}
+ul { list-style-type: square; }
+ul, ol { margin: 20px 0; padding: 0 0 0 30px; }
+ul li p, ol li p { margin: 0; }
+
+h2 {
+    color: #7ECEFD;
+    font-weight: 300;
+}
+
+h3 {
+    font-weight: 100;
+    color: #BEB8AB;
+    font-size: 1.35em;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #3E454C;
+    background: url('/assets/img/bg.png') center center repeat-y #3E454C;
     color: #FFF6E5;
-    margin: 25px;
-    width: 720px;
-    padding: 0 25px 0 0;
-    font-size: 16px;
-    font-weight: 400;
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    font-size: 13px;
 }
 
 body > header {
-    margin: 0 0 50px 0;
+    width: 226px;
+    float: left;
+}
+
+#page-content {
+    margin-left: 225px;
+    padding: 30px;
 }
 
 body > header h1 {
-    font-size: 64px;
+    opacity: 0.5;
     color: #FF7F66;
-    margin: 0;
-    line-height: 75%;
     text-transform: uppercase;
+    font-weight: 600;
+    font-size: 100px;
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    transform: rotate( 270deg ) translate( 100px, -335px );
 }
 
 .card-deck {
-    border-bottom: 1px solid rgba( 255, 255, 255, 0.1 );
-    overflow: auto;
+    margin: 0 0 25px 0;
+
+    width: 550px;
 }
 
 .card-deck > header {
 }
 
-.card-deck > header > h1 {
+.card-deck > header > h2 {
+    font-size: 24px;
+    margin-top: 0;
     text-transform: uppercase;
-    font-weight: 300;
-    padding: 0 0 0 10px;
+    font-weight: 200;
     color: #7ECEFD;
     letter-spacing: 2px;
 }
 
 .card-deck .card {
     display: block;
-    float: left;
-    width: 200px;
-    height: 100px;
-    text-decoration: none;
-    padding: 10px;
-    font-size: 12px;
-    margin: 10px 0 0 10px;
-    background-color: rgba( 255, 255, 255, 0.05 );
-    color: inherit;
+    padding: 10px 20px;
 }
 
 .card-deck .card:first-of-type {
 }
 
 .card:hover {
-    background-color: rgba( 255, 255, 255, 0.1 );
+    background-color: rgba( 255, 255, 255, 0.035 );
 }
 
 .card:active {
-    background-color: rgba( 255, 255, 255, 0.15 );
+    background-color: rgba( 255, 255, 255, 0.1 );
 }
 
 .card .title {
     display: block;
-    color: #7ECEFD;
     text-transform: uppercase;
 }
 
 .card .blurb {
     display: block;
+    color: #FFF6E5;   
 }
 
 .card .extra {
     display: block;
-    color: #A8A69D;
+    color: #888;
 }
 
-.title {}
+article.post a.back {
+    margin-bottom: 10px;
+    display: block;
+}
+
+article.post header {
+    padding: 0 0 20px 0;
+}
 
 article.post header h1.title {
-    font-size: 38px;
     color: #7ECEFD;
     text-transform: uppercase;
+    font-size: 24px;
     margin: 0;
+    text-shadow: 1px 1px 0 #666;
 }
 
 article.post header h2.blurb {
-    margin: 0;
+    color: #999;
     font-weight: 200;
-    font-size: 18px;
-    color: #D4CCBE;
-    text-transform: uppercase;
+    margin: 0;
 }
 
 .post .content {
     text-align: justify;
-    line-height: 1.4em;
 }
 
 .post h2 {
-    font-weight: normal;
-    font-size: 18px;
-    color: #C7C0B3;
 }
 
 .post blockquote {
-    background-color: rgba( 0, 0, 0, 0.25 );
-    padding: 15px;
-    margin: 10px;
-    font-style: italic;
-    font-weight: 100;
+    background-color: #394046;
+    margin: 25px 0;
+    padding: 10px 20px 10px 50px;
+    border-left: 5px solid #51575E;
+    position: relative;
+}
+
+.post blockquote:before {
+    content: '“';
+    font-size: 96px;
+    padding: 0;
+    line-height: 48px;
+    position: absolute;
+    left: 10px;
+    top: 0;
+    opacity: 0.3;
+    font-family: 'Georgia', serif;
 }
 
 .post strong {
-    text-shadow: 2px 0px 0 #333;
-    font-weight: normal;
-    color: #FAF1E0;
 }

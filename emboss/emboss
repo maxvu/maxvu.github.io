@@ -76,7 +76,7 @@ foreach ( glob( $site_conf['posts_glob'] ) as $post ) {
         "$site_root/posts/{$post['slug']}/index.htm",
         (new Template( 'data/templates/base.php' ))->generate(
             $site_conf + [
-                'content' => $post_partial
+                'content'    => $post_partial
             ]
         )
     );

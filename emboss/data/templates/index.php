@@ -1,11 +1,11 @@
 <section class="card-deck" id="writing">
     <header>
-        <h1>Writing</h1>
+        <h2>Writing</h2>
     </header>
     
     <div>
     <?php foreach ( $posts as $post ) { ?>
-        <a href="<?= $post['link'] ?>" class="card" target="_blank">
+        <a href="<?= $post['link'] ?>" class="card">
             <span class="title"><?= $post['title'] ?></span>
             <?php if ( isset( $post['blurb'] ) && !empty( $post['blurb'] ) ) { ?>
                 <span class="blurb"><?= $post['blurb'] ?></span>
@@ -19,7 +19,7 @@
 <?php foreach ( $sections as $section_name => $cards ) { ?>
     <section class="card-deck" id="<?php echo strtolower( $section_name ); ?>">
         <header>
-            <h1><?= $section_name ?></h1>
+            <h2><?= $section_name ?></h2>
         </header>
         
         <div>
