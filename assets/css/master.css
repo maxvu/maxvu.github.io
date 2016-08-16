@@ -22,14 +22,16 @@ h2 {
 }
 
 h3 {
-    font-weight: 100;
     color: #BEB8AB;
-    font-size: 1.35em;
+    font-size: 1.3em;
+    color: #AAA;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 0 #222;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    background: url('/assets/img/bg.png') center center repeat-y #3E454C;
+    background-color: #3E454C;
     color: #FFF6E5;
     width: 900px;
     margin: 0 auto;
@@ -45,6 +47,7 @@ body > header {
 #page-content {
     margin-left: 225px;
     padding: 30px;
+    background-color: #2E3338;
 }
 
 body > header h1 {
@@ -56,7 +59,7 @@ body > header h1 {
     width: 1000px;
     margin: 0 auto;
     padding: 0;
-    transform: rotate( 270deg ) translate( 100px, -335px );
+    transform: rotate( 270deg ) translate( 110px, -335px );
 }
 
 .card-deck {
@@ -144,6 +147,7 @@ article.post header h2.blurb {
     padding: 10px 20px 10px 50px;
     border-left: 5px solid #51575E;
     position: relative;
+    color: #CCC;
 }
 
 .post blockquote:before {
@@ -156,6 +160,10 @@ article.post header h2.blurb {
     top: 0;
     opacity: 0.3;
     font-family: 'Georgia', serif;
+}
+
+blockquote strong {
+    color: #EEE;
 }
 
 .post strong {
