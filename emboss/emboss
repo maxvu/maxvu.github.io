@@ -75,9 +75,14 @@ foreach ( glob( $site_conf['posts_glob'] ) as $post ) {
     file_put_contents(
         "$site_root/posts/{$post['slug']}/index.htm",
         (new Template( 'data/templates/base.php' ))->generate(
-            $site_conf + [
-                'content'    => $post_partial
-            ]
+            array_merge(
+                $site_conf,
+                [
+                    'content'     => $post_partial,
+                    'description' => $post['blurb'],
+                    'title'       => "max.vu | {$post['title']}"
+                ]
+            )
         )
     );
 }
