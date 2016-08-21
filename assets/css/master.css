@@ -51,7 +51,6 @@ body > header {
 }
 
 body > header h1 {
-    opacity: 0.5;
     color: #FF7F66;
     text-transform: uppercase;
     font-weight: 600;
@@ -167,4 +166,32 @@ blockquote strong {
 }
 
 .post strong {
+}
+
+.post figure {
+    margin: 10px auto;
+    padding: 10px 0;
+    background-color: #22262a;
+}
+
+.post figure img {
+    margin: 0;
+}
+
+.post figure figcaption {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+}
+
+.post p code, .post figure figcaption code {
+
+}
+
+.post p code, .post figure figcaption code, .post ul li code {
+    background-color: #574241;
+    padding: 0 5px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    font-style: normal;
 }
