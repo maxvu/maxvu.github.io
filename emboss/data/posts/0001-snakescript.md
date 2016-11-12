@@ -1,7 +1,8 @@
 {
     "title" : "Snakescript",
     "blurb" : "A devised, coded writing system",
-    "slug"  : "snakescript"
+    "slug"  : "snakescript",
+    "date"  : "2016-08-21"
 }
 ---
 

@@ -87,6 +87,11 @@ foreach ( glob( $site_conf['posts_glob'] ) as $post ) {
     );
 }
 
+# Sort posts by reverse date.
+uasort( $posts, function ( $a, $b ) {
+    return -1 * strcmp( $a['date'], $b['date'] );
+} );
+
 # Write index page.
 $index_partial = (new Template( 'data/templates/index.php' ))->generate([
     'posts'    => $posts,
