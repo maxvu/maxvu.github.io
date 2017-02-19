@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title><?= $title ?></title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,700,300' rel='stylesheet' type='text/css'>
         <?php if ( isset( $description ) ) { ?>
             <meta name="description" content="<?= $description ?>">
         <?php } ?>
