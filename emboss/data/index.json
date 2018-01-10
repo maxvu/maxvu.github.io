@@ -18,6 +18,14 @@
     ],
     "work" : [
         {
+            "title" : "Software Engineer",
+            "blurb" : "MadGlory",
+            "href"  : "https://madglory.com/",
+            "extra" : [
+                "Fall 2017 to present"
+            ]
+        },
+        {
             "title" : "Software Developer",
             "blurb" : "athenahealth, Inc.",
             "href"  : "http://www.athenahealth.com/",
